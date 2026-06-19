@@ -19,26 +19,23 @@ go install github.com/yuvrajmodz/gojokes/cmd/gojokes@latest
 ## Library Usage
 
 ```go
-import "github.com/yuvrajmodz/gojokes"
+package main
 
-// Random joke from any category
-joke, err := gojokes.Random()
-if err != nil {
-    log.Fatal(err)
+import (
+	"fmt"
+	"log"
+
+	"github.com/yuvrajmodz/gojokes"
+)
+
+func main() {
+	joke, err := gojokes.Random()
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	fmt.Println(joke)
 }
-fmt.Println(joke)
-
-// Random joke from a specific category
-joke, err = gojokes.Category("programming")
-if err != nil {
-    log.Fatal(err)
-}
-fmt.Println(joke)
-
-// List all available categories
-cats := gojokes.Categories()
-fmt.Println(cats)
-// Output: [golang linux neutral programming]
 ```
 
 ## CLI Usage
