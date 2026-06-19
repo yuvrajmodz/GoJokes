@@ -56,10 +56,11 @@ gojokes --list
 
 | Category     | Description                        |
 |--------------|------------------------------------|
-| programming  | General software development humour |
+| programming  | General software development Humour |
 | golang       | Go-specific jokes                  |
 | linux        | Linux and Unix humour              |
 | neutral      | Wordplay and general jokes         |
+| dark         | Dark Humour Jokes                  |
 
 ## API Reference
 
@@ -81,7 +82,7 @@ Returns a sorted list of all available category names.
 - **Embedded data** — all JSON joke files are compiled into the binary via `//go:embed`.
 - **Single load** — categories are parsed once at startup using `sync.Once`.
 - **Modern randomness** — uses `math/rand/v2` for unbiased selection.
-- **Production Optimized** — Extremely Super Fast
+- **Lightweight and Efficient** — Runtime Performance
 
 ## Requirements
 
